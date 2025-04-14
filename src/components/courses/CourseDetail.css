@@ -1,0 +1,196 @@
+/* frontend/src/components/courses/CourseDetail.css */
+.course-detail-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.course-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.course-detail-title h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.course-category-tag {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.course-detail-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn, .back-btn, .back-to-courses-btn {
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+.delete-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.back-btn, .back-to-courses-btn {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+}
+
+.back-btn:hover, .back-to-courses-btn:hover {
+  background-color: #ccc;
+}
+
+.delete-error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  color: #666;
+}
+
+.error-container, .not-found-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.error-container h2, .not-found-container h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.course-detail-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.course-detail-info {
+  flex: 1;
+}
+
+.course-description, .course-progress-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.course-description h2, .course-progress-section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.progress-bar-detail {
+  flex: 1;
+  height: 15px;
+  background-color: #e0e0e0;
+  border-radius: 7.5px;
+  overflow: hidden;
+}
+
+.progress-fill-detail {
+  height: 100%;
+  background-color: #2ecc71;
+  transition: width 0.5s ease;
+}
+
+.progress-percentage {
+  font-weight: bold;
+  min-width: 50px;
+  text-align: right;
+}
+
+.progress-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.progress-button {
+  flex: 1;
+  min-width: 60px;
+  padding: 8px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.progress-button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.progress-button:disabled {
+  background-color: #2ecc71;
+  cursor: default;
+}
+
+.custom-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-progress label {

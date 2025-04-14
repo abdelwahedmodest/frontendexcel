@@ -1,0 +1,242 @@
+
+/* frontend/src/components/courses/CourseList.css */
+.course-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-course-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.add-course-btn:hover {
+  background-color: #2980b9;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.filters-container {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-input, .category-select, .progress-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.progress-input {
+  width: calc(50% - 5px);
+  display: inline-block;
+}
+
+.progress-input:first-child {
+  margin-right: 10px;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.apply-filters-btn, .reset-filters-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.apply-filters-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.apply-filters-btn:hover {
+  background-color: #2980b9;
+}
+
+.reset-filters-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.reset-filters-btn:hover {
+  background-color: #ccc;
+}
+
+.no-courses {
+  text-align: center;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.no-courses p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.course-info {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.course-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.course-category {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.course-description {
+  color: #666;
+  margin-bottom: 0;
+}
+
+.course-progress-container {
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #2ecc71;
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.course-actions {
+  display: flex;
+  border-top: 1px solid #eee;
+}
+
+.view-course-btn, .edit-course-btn {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-course-btn {
+  background-color: #f8f9fa;
+  color: #3498db;
+}
+
+.view-course-btn:hover {
+  background-color: #eaecef;
+}
+
+.edit-course-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-course-btn:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .course-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .filters-container {
+    flex-direction: column;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
