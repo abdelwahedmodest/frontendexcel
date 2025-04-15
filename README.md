@@ -1,3 +1,60 @@
+#issue
+Uncaught runtime errors:
+×
+ERROR
+Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `App`.
+Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `App`.
+    at createFiberFromTypeAndProps (http://localhost:3000/static/js/bundle.js:51056:21)
+    at createFiberFromElement (http://localhost:3000/static/js/bundle.js:51077:19)
+    at createChild (http://localhost:3000/static/js/bundle.js:38149:32)
+    at reconcileChildrenArray (http://localhost:3000/static/js/bundle.js:38389:29)
+    at reconcileChildFibers (http://localhost:3000/static/js/bundle.js:38731:20)
+    at reconcileChildren (http://localhost:3000/static/js/bundle.js:43151:32)
+    at updateHostComponent (http://localhost:3000/static/js/bundle.js:43802:7)
+    at beginWork (http://localhost:3000/static/js/bundle.js:45254:18)
+    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/bundle.js:30212:18)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/bundle.js:30256:20)
+ERROR
+Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `App`.
+Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `App`.
+    at createFiberFromTypeAndProps (http://localhost:3000/static/js/bundle.js:51056:21)
+    at createFiberFromElement (http://localhost:3000/static/js/bundle.js:51077:19)
+    at createChild (http://localhost:3000/static/js/bundle.js:38149:32)
+    at reconcileChildrenArray (http://localhost:3000/static/js/bundle.js:38389:29)
+    at reconcileChildFibers (http://localhost:3000/static/js/bundle.js:38731:20)
+    at reconcileChildren (http://localhost:3000/static/js/bundle.js:43151:32)
+    at updateHostComponent (http://localhost:3000/static/js/bundle.js:43802:7)
+    at beginWork (http://localhost:3000/static/js/bundle.js:45254:18)
+    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/bundle.js:30212:18)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/bundle.js:30256:20)
+ERROR
+Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `App`.
+Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `App`.
+    at createFiberFromTypeAndProps (http://localhost:3000/static/js/bundle.js:51056:21)
+    at createFiberFromElement (http://localhost:3000/static/js/bundle.js:51077:19)
+    at createChild (http://localhost:3000/static/js/bundle.js:38149:32)
+    at reconcileChildrenArray (http://localhost:3000/static/js/bundle.js:38389:29)
+    at reconcileChildFibers (http://localhost:3000/static/js/bundle.js:38731:20)
+    at reconcileChildren (http://localhost:3000/static/js/bundle.js:43151:32)
+    at updateHostComponent (http://localhost:3000/static/js/bundle.js:43802:7)
+    at beginWork (http://localhost:3000/static/js/bundle.js:45254:18)
+    at beginWork$1 (http://localhost:3000/static/js/bundle.js:50189:18)
+    at performUnitOfWork (http://localhost:3000/static/js/bundle.js:49459:16)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

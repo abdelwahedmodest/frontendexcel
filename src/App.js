@@ -16,9 +16,7 @@ import CoursePage from './pages/CoursePage';
 import CalendarPage from './pages/CalendarPage';
 import APIExplorer from './components/common/ApiExplorer';
 
-
 // Import common components
-import PrivateRoute from './components/common/PrivateRoute';
 import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
 import Footer from './components/layout/Footer';
@@ -26,33 +24,77 @@ import Footer from './components/layout/Footer';
 // Import context providers
 import { AuthProvider } from './context/AuthContext';
 
+// Import the PrivateRoute component
+import PrivateRoute from './components/common/PrivateRoute';
+
 function App() {
   return (
-    <Router>
-      <AuthProvider>
-        <div className="app">
+    <AuthProvider>
+      <Router>
+        <div className="app-container">
           <Header />
-          <div className="main-container">
+          <div className="main-content">
             <Sidebar />
-            <main className="content">
+            <main className="content-area">
               <Routes>
-                <Route exact path="/" element={<HomePage/>} />
-                <Route path="/login" element={<LoginPage/>} />
-                <Route path="/register" element={<RegisterPage/>} />
-                <PrivateRoute path="/dashboard" element={<DashboardPage/>} />
-                <PrivateRoute path="/profile" element={<ProfilePage/>} />
-                <PrivateRoute path="/activities" element={<ActivityPage/>} />
-                <PrivateRoute path="/projects" element={<ProjectPage/>} />
-                <PrivateRoute path="/courses" element={<CoursePage/>} />
-                <PrivateRoute path="/calendar" element={<CalendarPage/>} />
-                <PrivateRoute path="/api-explorer" element={<APIExplorer/>} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
+                
+                <Route path="/dashboard" element={
+                  <PrivateRoute>
+                    <DashboardPage />
+                  </PrivateRoute>
+                } />
+                
+                <Route path="/profile" element={
+                  <PrivateRoute>
+                    <ProfilePage />
+                  </PrivateRoute>
+                } />
+                
+                <Route path="/activities" element={
+                  <PrivateRoute>
+                    <ActivityPage />
+                  </PrivateRoute>
+                } />
+                
+                <Route path="/projects" element={
+                  <PrivateRoute>
+                    <ProjectPage />
+                  </PrivateRoute>
+                } />
+                
+                <Route path="/courses" element={
+                  <PrivateRoute>
+                    <CoursePage />
+                  </PrivateRoute>
+                } />
+                
+                <Route path="/courses/:id" element={
+                  <PrivateRoute>
+                    <CoursePage />
+                  </PrivateRoute>
+                } />
+                
+                <Route path="/calendar" element={
+                  <PrivateRoute>
+                    <CalendarPage />
+                  </PrivateRoute>
+                } />
+                
+                <Route path="/api-explorer" element={
+                  <PrivateRoute>
+                    <APIExplorer />
+                  </PrivateRoute>
+                } />
               </Routes>
             </main>
           </div>
           <Footer />
         </div>
-      </AuthProvider>
-    </Router>
+      </Router>
+    </AuthProvider>
   );
 }
 
